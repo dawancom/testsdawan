@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "fr.dawan.testsdawan"
+    versionCode="1"
+    version   = "0.0.2">
+	<!-- see https://build.phonegap.com/docs/config-xml -->
+    <name>testsdawan</name>
+
+    <description>
+        Les tests pour formation Dawan (change this : config.xml)
+        Do not use this, this is useless !
+    </description>
+
+    <author href="https://dawan.fr">
+		dawancom, mic
+    </author>
+
+	<preference name="orientation" value="landscape" />
+	<preference name="fullscreen" value="true" />
+    
+    <!-- ANDROID spec -->
+    <preference name="android-minSdkVersion" value="9" />
+	<preference name="splash-screen-duration" value="10000" />
+
+</widget>
