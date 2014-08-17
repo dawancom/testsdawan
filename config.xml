@@ -2,8 +2,8 @@
 <widget xmlns = "http://www.w3.org/ns/widgets"
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "fr.dawan.testsdawan"
-    versionCode="3"
-    version   = "0.2.0">
+    versionCode="4"
+    version   = "0.3.0">
 	<!-- see https://build.phonegap.com/docs/config-xml -->
     <name>testsdawan</name>
 
@@ -26,4 +26,5 @@
 	
 	<gap:plugin name="com.badrit.macaddress" />
 	<gap:plugin name="com.ankamagames.plugins.sysinfo" />
+	<gap:plugin name="io.github.pwlin.cordova.plugins.fileopener2a" />
 </widget>
