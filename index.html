@@ -18,12 +18,18 @@
 		    document.getElementById("sySpan").innerHTML = "undefined";
 		else
 		    document.getElementById("sySpan").innerHTML = window.Sysinfo;
-		document.getElementById("foButton").onclik = function (){
+		document.getElementById("foButton").onclick = function (){
 			cordova.plugins.fileOpener2.open(
 	      		'/sdcard/Download/test.pdf',
 	        	'application/pdf'
     		);
 		}
+		if(window.wizUtils == undefined)
+		    document.getElementById("wuSpan").innerHTML = "undefined";
+		else
+		    window.wizUtils.getBundleDisplayName(function(v){
+		    	document.getElementById("wuSpan").innerHTML = v;
+			});
 	}
 	</script>
 </head>
@@ -33,7 +39,9 @@
 			<h1>Bienvenue sur le site exemple HTML5 de Dawan</h1>
 			<p>Exemple de plugin (MacAddress de mohamed-salah) : <span id="maSpan">?</span></p>
 			<p>Exemple de plugin (Sysinfo de Ankama) : <span id="sySpan">?</span></p>
-			<p>Exemple de plugin (File Opener 2 de break24) : <input type="button" id="foButton"></p>
+			<p>Exemple de plugin (File Opener 2 de break24) : <input type="button" id="foButton"
+				value="test.pdf"></p>
+			<p>Exemple de plugin (WizUtils de Wizcorp) : <span id="wuSpan">?</span></p>
 		</hgroup>
 	</header>
 </body>
