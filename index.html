@@ -7,7 +7,7 @@
 	<script src="MacAddress.js"></script>
 	<script>
 	window.onload = function() {
-		if(window.MacAddress == unefined)
+		if(window.MacAddress == undefined)
 		    document.getElementById("maSpan").innerHTML = "undefined";
 		window.MacAddress.getMacAddress(
 			function(a) { document.getElementById("maSpan").innerHTML = a; },
