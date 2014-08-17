@@ -6,7 +6,7 @@
 	<script src="cordova.js"></script>
 	<script src="MacAddress.js"></script>
 	<script>
-	window.onload = function() {
+	document.addEventListener("deviceready", function() {
 		if(window.MacAddress == undefined)
 		    document.getElementById("maSpan").innerHTML = "undefined";
 		else
@@ -30,7 +30,15 @@
 		    window.wizUtils.getBundleDisplayName(function(v){
 		    	document.getElementById("wuSpan").innerHTML = v;
 			});
-	}
+		if(window.plugins.uniqueDeviceID == undefined)
+			document.getElementById("udSpan").innerHTML = "undefined";
+		else
+			window.plugins.uniqueDeviceID.get(function(u) {
+				document.getElementById("udSpan").innerHTML = u;
+			}, function(e) {
+				document.getElementById("udSpan").innerHTML = "Error : "+e;
+			});
+	});
 	</script>
 </head>
 <body>
@@ -42,6 +50,8 @@
 			<p>Exemple de plugin (File Opener 2 de break24) : <input type="button" id="foButton"
 				value="test.pdf"></p>
 			<p>Exemple de plugin (WizUtils de Wizcorp) : <span id="wuSpan">?</span></p>
+			<p>Exemple de plugin (UniqueDeviceID de Paldom) : <span id="udSpan">?</span></p>
+			
 		</hgroup>
 	</header>
 </body>
