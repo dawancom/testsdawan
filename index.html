@@ -3,11 +3,20 @@
 <head>
 	<title>Base HTML5</title>
 	<meta charset="utf-8" />
+	<script src="cordova.js"></script>
+	<script src="MacAddress.js"></script>
+	<script>
+	window.MacAddress.getMacAddress(
+		function(a) { document.getElementById("maSpan").innerHTML = a; },
+		function(err) { document.getElementById("maSpan").innerHTML = "Error : "+err; }
+	);
+	</script>
 </head>
 <body>
 	<header>
 		<hgroup>
 			<h1>Bienvenue sur le site exemple HTML5 de Dawan</h1>
+			<p>Exemple de plugin (MacAddress de mohamed-salah : <span id="maSpan"></span></p>
 		</hgroup>
 	</header>
 </body>
