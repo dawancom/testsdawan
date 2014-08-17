@@ -3,7 +3,7 @@
     xmlns:gap = "http://phonegap.com/ns/1.0"
     id        = "fr.dawan.testsdawan"
     versionCode="1"
-    version   = "0.0.2">
+    version   = "0.1.0">
 	<!-- see https://build.phonegap.com/docs/config-xml -->
     <name>testsdawan</name>
 
