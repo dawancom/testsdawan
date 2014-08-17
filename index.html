@@ -9,10 +9,15 @@
 	window.onload = function() {
 		if(window.MacAddress == undefined)
 		    document.getElementById("maSpan").innerHTML = "undefined";
-		window.MacAddress.getMacAddress(
-			function(a) { document.getElementById("maSpan").innerHTML = a; },
-			function(err) { document.getElementById("maSpan").innerHTML = "Error : "+err; }
-		);
+		else
+			window.MacAddress.getMacAddress(
+				function(a) { document.getElementById("maSpan").innerHTML = a; },
+				function(err) { document.getElementById("maSpan").innerHTML = "Error : "+err; }
+			);
+		if(window.Sysinfo == undefined)
+		    document.getElementById("sySpan").innerHTML = "undefined";
+		else
+		    document.getElementById("sySpan").innerHTML = window.Sysinfo;
 	}
 	</script>
 </head>
@@ -21,6 +26,7 @@
 		<hgroup>
 			<h1>Bienvenue sur le site exemple HTML5 de Dawan</h1>
 			<p>Exemple de plugin (MacAddress de mohamed-salah) : <span id="maSpan"></span></p>
+			<p>Exemple de plugin (Sysinfo de Ankama) : <span id="sySpan"></span></p>
 		</hgroup>
 	</header>
 </body>
