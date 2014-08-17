@@ -22,5 +22,5 @@
     <!-- ANDROID spec -->
     <preference name="android-minSdkVersion" value="9" />
 	<preference name="splash-screen-duration" value="10000" />
-
+	<preference name="phonegap-version" value="3.5.0" />
 </widget>
