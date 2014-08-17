@@ -17,10 +17,10 @@
 		if(window.Sysinfo == undefined)
 		    document.getElementById("sySpan").innerHTML = "undefined";
 		else
-		    document.getElementById("sySpan").innerHTML = window.Sysinfo;
+		    document.getElementById("sySpan").innerHTML = JSON.stringify(window.Sysinfo);
 		document.getElementById("foButton").onclick = function (){
 			cordova.plugins.fileOpener2.open(
-	      		'/sdcard/Download/test.pdf',
+	      		'/sdcard/download/test.pdf',
 	        	'application/pdf'
     		);
 		}
